@@ -1,4 +1,4 @@
-package Aula01;
+package Aula01.Exemplo01;
 
 /**
  * Criação da Classe (Modelo)

@@ -8,9 +8,15 @@ public class testePessoa {
         Pessoa pessoa4 = new Pessoa("Ted Mosby", 20, "Estudante");
 
         pessoa1.exibir();
-        pessoa2.exibir();
-        pessoa3.exibir();
-        pessoa4.exibir();
+        System.out.println("");
 
+        pessoa2.exibir();
+        System.out.println("");
+
+        pessoa3.exibir();
+        System.out.println("");
+
+        pessoa4.exibir();
+        System.out.println("");
     }
 }

@@ -33,6 +33,7 @@ public class moto {
 
         if(velocidadeAtual > velocidadeMaxima) {
             System.out.println("A moto está acima da velocidade maxima");
+            System.exit(0);;
             return 0;
         } else {
             System.out.println("Sua velocidade atual é " + velocidadeAtual);

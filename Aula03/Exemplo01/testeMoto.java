@@ -15,6 +15,7 @@ public class testeMoto {
                 "Moto 1" +
                 "..............");
 
+        System.out.println(scooter.velocidadeAtual);
         System.out.println(".............." +
                 "A moto entrou em movimento, quanto deseja acelerar?" +
                 "..............");
@@ -39,6 +40,7 @@ public class testeMoto {
         kavasaki.velocidadeMaxima = 150;
         kavasaki.velocidadeAtual = 10;
 
+        System.out.println(kavasaki.velocidadeAtual);
         System.out.println(".............." +
                 "A moto entrou em movimento, quanto deseja acelerar?" +
                 "..............");
@@ -63,6 +65,7 @@ public class testeMoto {
         harly.velocidadeMaxima = 150;
         harly.velocidadeAtual = 10;
 
+        System.out.println(harly.velocidadeAtual);
         System.out.println(".............." +
                 "A moto entrou em movimento, quanto deseja acelerar?" +
                 "..............");

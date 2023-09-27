@@ -1,22 +1,11 @@
-package Aula04.Exercicio01;
+/** 
+ * @author Matheus Gabriel
+ * @since 1.1 
+*/
 
+package Aula04.Exercicio01;
 import java.util.Random;
 import java.util.Scanner;
-
-//@Matheus
-/**
- * Modificadores de Acesso
- * Servem para definir a visibilidade que o determinada classe,
- * ou membro, terá diante de outras. Elese estão relacionados ao
- * conceito de ENCAPSULAMENTO (Segurança). Tendo os seguintes
- * modificadores:
- * - public: Torna uma classe visível para qualquer outra
- * classe. [SEM ENCAPSULAMENTO];
- * - protected: Torna um membro acessível as classes do mesmo
- * pacote atráves da herança.
- * - private: Torna um membro acessível apenas pra classe que o
- * contém. [ENCAPSULAMENTO + Restrito];
- */
 
 public class banco {
     private double saldo; // O saldo não pode ser alterado em qualquer lugar do programa

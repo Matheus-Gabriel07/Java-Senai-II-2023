@@ -1,5 +1,11 @@
 package Aula03.Exemplo02;
 
+/**Modificadores de Acesso
+ *  Servem para definir a visibilidade que o determinada classe,
+ *  ou membro, terá diante de outras. Elese estão relacionados ao
+ *  conceito de ENCAPSULAMENTO (Segurança). 
+*/
+
 public class banco {
     private double saldo; // O saldo não pode ser alterado em qualquer lugar do programa
     private String nomeTitular;

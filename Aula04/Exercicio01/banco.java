@@ -1,4 +1,6 @@
 package Aula04.Exercicio01;
+
+import java.util.Random;
 import java.util.Scanner;
 
 //@Matheus
@@ -63,17 +65,108 @@ public class banco {
 
     // Metódo PIX
     public void pix(String cpf, int valor) {
-        if(saldo < valor) {
+        if (saldo < valor) {
             System.out.println("Valor insuficiente, ou valor invalido\n");
         } else {
             saldo -= valor;
             System.out.println("\t=================\n" +
-                   "\nPIX feito para: " + cpf + "\n" +
-                   "\sValor: R$" + valor + "\n" +
-                   "\sSaldo da conta: R$" + saldo + "\n" +
-                   "\t=================\n");
+                    "\nPIX feito para: " + cpf + "\n" +
+                    "\sValor: R$" + valor + "\n" +
+                    "\sSaldo da conta: R$" + saldo + "\n" +
+                    "\t=================\n");
         }
-   }
+    }
+
+    // Método de Pagar boleto
+    public void menuContas() {
+        System.out.print("\t======= Pagar contas =======\n" +
+                "\sOpções:\n" +
+                "\s 01) Luz\n" +
+                "\s 02) Água\n" +
+                "\s 03) Cartão de Crédito\n" +
+                "\s Digite uma opção:");
+    }
+
+    public void iniciarPagarContas() {
+        boolean continuar = false;
+        menuContas();
+        do {
+            int opc = sc.nextInt();
+            switch (opc) {
+                case 1:
+                    System.out.println("== Conta de luz ==");
+                    pagarContas(1);
+                    break;
+
+                case 2:
+                    System.out.println("== Conta de água ==");
+                    pagarContas(2);
+                    break;
+
+                case 3:
+                    System.out.println("== Conta de cartão de crédito ==");
+                    pagarContas(3);
+                    break;
+
+                default:
+                    System.out.println("Opção inválida");
+                    break;
+
+            }
+        } while (continuar);
+    }
+
+    public void pagarContas(int opcConta) {
+        Random valorContaLuz = new Random();
+        int valorPagarLuz = valorContaLuz.nextInt(400);
+        Random valorContaAgua = new Random();
+        int valorPagarAgua = valorContaAgua.nextInt(350);
+        Random valorContaCartao = new Random();
+        int valorPagarCartao = valorContaCartao.nextInt(2500);
+
+        switch (opcConta) {
+            case 1:
+                System.out.println("Valor da conta é: " + valorPagarLuz);
+                validacaoConta(valorPagarLuz);
+                break;
+
+            case 2:
+                System.out.println("Valor da conta é: " + valorPagarAgua);
+                validacaoConta(valorPagarAgua);
+                break;
+
+            case 3:
+                System.out.println("Valor da conta é: " + valorPagarCartao);
+                validacaoConta(valorPagarCartao);
+                break;
+
+            default:
+                System.out.println("Essa conta não existe");
+                break;
+        }
+    }
+
+    public void validacaoConta(int valorPagar) {
+        System.out.println("Deseja pagar? (1- Sim/ 2- Não)");
+        int opc = sc.nextInt();
+        switch (opc) {
+            case 1:
+                if (saldo >= valorPagar) {
+                    saldo -= valorPagar;
+                    System.out.println("Conta paga. Saldo atual é de R$" + saldo);
+                } else {
+                    System.out.println("Não foi possivel pagar a conta. Valor de saldo insuficiente.");
+                }
+                break;
+
+            case 2:
+                break;
+
+            default:
+                System.out.println("Opção inválida");
+                break;
+        }
+    }
 
     // Exibição de dados
     public void informacoes() {
@@ -91,11 +184,12 @@ public class banco {
                 "\s 02) Sacar\n" +
                 "\s 03) Depositar\n" +
                 "\s 04) PIX\n" +
-                "\s 05) Sair\n" +
+                "\s 05) Pagar conta\n" +
+                "\s 06) Sair\n" +
                 "\s Digite uma opção:");
     }
 
-    public void menuIniciar(){
+    public void menuIniciar() {
         boolean continuar = true;
         do {
             menu();
@@ -141,6 +235,10 @@ public class banco {
                     break;
 
                 case 5:
+                    iniciarPagarContas();
+                    break;
+
+                case 6:
                     System.out.println("Obrigado por utilizar\n");
                     continuar = false;
                     break;

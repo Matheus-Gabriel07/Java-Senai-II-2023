@@ -5,16 +5,15 @@ import java.util.*;
 public class testeBanco {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int min = 1000;
-        int max = 9999;
-        int numeroUser = (int) Math.floor(Math.random() * (max - min + 1) + min);
+        Random numeroUser = new Random();
+        int numeroConta = numeroUser.nextInt(9999);
 
         System.out.print("=== Seja bem-vindo ao SENAI Bank ===\n" +
-                "- Necessito que digite o seu nome\n");
+                "- Digite o seu nome\n");
         String nomeUsuario = sc.nextLine();
         System.out.println("- Agora necessito que insira seu saldo: ");
         double saldoInial = sc.nextDouble();
-        banco newUser = new banco(saldoInial, nomeUsuario, numeroUser);
+        banco newUser = new banco(saldoInial, nomeUsuario, numeroConta);
         try {
             Thread.sleep(2500);
         } catch (InterruptedException e) {
@@ -22,7 +21,7 @@ public class testeBanco {
         }
         newUser.informacoes();
         newUser.menuIniciar();
-        
+
         sc.close();
     }
 }

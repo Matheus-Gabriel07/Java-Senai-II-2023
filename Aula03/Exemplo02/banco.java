@@ -1,10 +1,18 @@
 package Aula03.Exemplo02;
 
-/**Modificadores de Acesso
- *  Servem para definir a visibilidade que o determinada classe,
- *  ou membro, terá diante de outras. Elese estão relacionados ao
- *  conceito de ENCAPSULAMENTO (Segurança). 
-*/
+/**
+ * Modificadores de Acesso
+ * Servem para definir a visibilidade que o determinada classe,
+ * ou membro, terá diante de outras. Elese estão relacionados ao
+ * conceito de ENCAPSULAMENTO (Segurança). Tendo os seguintes
+ * modificadores:
+ * - public: Torna uma classe visível para qualquer outra
+ * classe. [SEM ENCAPSULAMENTO];
+ * - protected: Torna um membro acessível as classes do mesmo
+ * pacote atráves da herança.
+ * - private: Torna um membro acessível apenas pra classe que o
+ * contém. [ENCAPSULAMENTO + Restrito];
+ */
 
 public class banco {
     private double saldo; // O saldo não pode ser alterado em qualquer lugar do programa
@@ -52,5 +60,14 @@ public class banco {
                 "\sTitular da conta: " + nomeTitular + "\n" +
                 "\sSaldo disponivel: R$" + saldo + "\n" +
                 "\t=================\n");
+    }
+
+    public void menu() {
+        System.out.print("\t======= SENAI Bank =======\n" +
+                "\sOpções:\n" +
+                "\s 01) Consultar Extrato\n" +
+                "\s 02) Sacar\n" +
+                "\s 03) Depositar\n" +
+                "\s 04) Sair\n");
     }
 }

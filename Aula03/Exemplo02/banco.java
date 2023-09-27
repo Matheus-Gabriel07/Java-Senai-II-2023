@@ -22,7 +22,7 @@ public class banco {
     public void deposito(int quantia) {
         if (quantia > 0) {
             saldo += quantia;
-            System.out.println("Depósito de R$" + saldo + ", realizado com sucesso");
+            System.out.println("Depósito de R$" + quantia + ", realizado com sucesso");
         } else {
             System.out.println("Não é possivel depositar esta quantia");
         }
@@ -42,9 +42,9 @@ public class banco {
 
     // Exibição de dados
     public void informacoes() {
-        System.out.println("=================\n" +
-                "Titular da conta: " + nomeTitular + "\n" +
-                "Saldo disponivel: R$" + saldo +
-                "\n=================\n");
+        System.out.println("\t=================\n" +
+                "\sTitular da conta: " + nomeTitular + "\n" +
+                "\sSaldo disponivel: R$" + saldo + "\n" +
+                "\t=================\n");
     }
 }

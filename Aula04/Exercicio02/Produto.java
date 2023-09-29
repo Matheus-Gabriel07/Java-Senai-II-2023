@@ -18,10 +18,11 @@ public class Produto {
 
     public void informacoesProduto() {
         System.out.println("================\n"+
-        "Produto: " + getNomeProduto() + " \n" +
-        "Quantidade: " + getQuantidadeEstoque() + " \n" +
-        "Preço Bruto no Estoque: " + precoTotalProduto(quantidadeEstoque) + " \n" +
-        "Preço Unitário: " + getPreco() + " \n" 
+                    "Produto: " + getNomeProduto() + " \n" +
+                    "Quantidade: " + getQuantidadeEstoque() + " \n" +
+                    "Preço Bruto no Estoque: " + precoTotalProduto(quantidadeEstoque) + " \n" +
+                    "Preço Unitário: " + getPreco() +
+                    "\n================\n"
         );
     }
 

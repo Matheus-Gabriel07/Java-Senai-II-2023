@@ -11,6 +11,9 @@ public class Empregado {
         this.tempoDeCasa = tempoDeCasa;
     }
 
+    public Empregado(String nome2, double d, String cargo2, int tempoDeCasa2) {
+    }
+
     public String getNome() {
         return nome;
     }
